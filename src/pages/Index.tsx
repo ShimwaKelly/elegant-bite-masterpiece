@@ -47,20 +47,20 @@ const Index = () => {
       <Hero />
       
       {/* About Section */}
-      <section className="py-20 bg-restaurant-black">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+      <section className="py-12 sm:py-16 md:py-20 bg-restaurant-black">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-16 items-center">
             {/* Text Content */}
             <div className="order-2 md:order-1">
               <p className="section-subtitle">Our Story</p>
-              <h2 className="section-title">Culinary Excellence Since 2005</h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <h2 className="section-title text-2xl md:text-3xl lg:text-4xl">Culinary Excellence Since 2005</h2>
+              <p className="text-gray-300 mb-6 leading-relaxed text-sm md:text-base">
                 At L'Élégance, we believe that dining is an art form. Our chef combines classical techniques with innovative approaches, crafting dishes that celebrate the finest seasonal ingredients.
               </p>
-              <p className="text-gray-300 mb-8 leading-relaxed">
+              <p className="text-gray-300 mb-8 leading-relaxed text-sm md:text-base">
                 Every detail of your experience has been carefully considered, from our thoughtfully designed interior to our meticulously curated wine selection. Join us for an unforgettable culinary journey.
               </p>
-              <Link to="/about" className="ghost-button inline-flex items-center">
+              <Link to="/about" className="ghost-button inline-flex items-center text-sm md:text-base">
                 Discover Our Story
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Link>
@@ -81,43 +81,43 @@ const Index = () => {
       </section>
       
       {/* Features Section */}
-      <section className="py-20 bg-restaurant-dark">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-16">
+      <section className="py-12 sm:py-16 md:py-20 bg-restaurant-dark">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <div className="text-center mb-10 md:mb-16">
             <p className="section-subtitle">Experience</p>
-            <h2 className="section-title">Why Choose Us</h2>
+            <h2 className="section-title text-2xl md:text-3xl lg:text-4xl">Why Choose Us</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {/* Feature 1 */}
-            <div className="bg-restaurant-black/50 p-8 rounded-lg border border-gold/10 hover:border-gold/30 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-gold/5 hover:shadow-lg">
-              <div className="h-14 w-14 bg-gold/10 rounded-full flex items-center justify-center mb-6">
-                <UtensilsCrossed className="h-7 w-7 text-gold" />
+            <div className="bg-restaurant-black/50 p-6 md:p-8 rounded-lg border border-gold/10 hover:border-gold/30 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-gold/5 hover:shadow-lg">
+              <div className="h-12 w-12 bg-gold/10 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                <UtensilsCrossed className="h-6 w-6 text-gold" />
               </div>
-              <h3 className="text-xl font-playfair font-bold text-white mb-4">Exquisite Cuisine</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <h3 className="text-lg md:text-xl font-playfair font-bold text-white mb-3 md:mb-4">Exquisite Cuisine</h3>
+              <p className="text-gray-400 leading-relaxed text-sm md:text-base">
                 Our menu celebrates seasonal ingredients with creative flair, elevating traditional dishes to new heights of sophistication.
               </p>
             </div>
             
             {/* Feature 2 */}
-            <div className="bg-restaurant-black/50 p-8 rounded-lg border border-gold/10 hover:border-gold/30 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-gold/5 hover:shadow-lg">
-              <div className="h-14 w-14 bg-gold/10 rounded-full flex items-center justify-center mb-6">
-                <Crown className="h-7 w-7 text-gold" />
+            <div className="bg-restaurant-black/50 p-6 md:p-8 rounded-lg border border-gold/10 hover:border-gold/30 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-gold/5 hover:shadow-lg">
+              <div className="h-12 w-12 bg-gold/10 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                <Crown className="h-6 w-6 text-gold" />
               </div>
-              <h3 className="text-xl font-playfair font-bold text-white mb-4">Elegant Ambiance</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <h3 className="text-lg md:text-xl font-playfair font-bold text-white mb-3 md:mb-4">Elegant Ambiance</h3>
+              <p className="text-gray-400 leading-relaxed text-sm md:text-base">
                 Immerse yourself in our thoughtfully designed space, where every detail contributes to an atmosphere of refined luxury.
               </p>
             </div>
             
             {/* Feature 3 */}
-            <div className="bg-restaurant-black/50 p-8 rounded-lg border border-gold/10 hover:border-gold/30 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-gold/5 hover:shadow-lg">
-              <div className="h-14 w-14 bg-gold/10 rounded-full flex items-center justify-center mb-6">
-                <Users className="h-7 w-7 text-gold" />
+            <div className="bg-restaurant-black/50 p-6 md:p-8 rounded-lg border border-gold/10 hover:border-gold/30 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-gold/5 hover:shadow-lg sm:col-span-2 md:col-span-1 mx-auto sm:mx-0 max-w-md sm:max-w-none">
+              <div className="h-12 w-12 bg-gold/10 rounded-full flex items-center justify-center mb-4 md:mb-6">
+                <Users className="h-6 w-6 text-gold" />
               </div>
-              <h3 className="text-xl font-playfair font-bold text-white mb-4">Impeccable Service</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <h3 className="text-lg md:text-xl font-playfair font-bold text-white mb-3 md:mb-4">Impeccable Service</h3>
+              <p className="text-gray-400 leading-relaxed text-sm md:text-base">
                 Our dedicated team ensures that every aspect of your dining experience meets our high standards of excellence.
               </p>
             </div>
@@ -126,24 +126,24 @@ const Index = () => {
       </section>
       
       {/* Featured Menu Items */}
-      <section className="py-20 bg-restaurant-black">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center mb-16">
+      <section className="py-12 sm:py-16 md:py-20 bg-restaurant-black">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <div className="text-center mb-10 md:mb-16">
             <p className="section-subtitle">Culinary Excellence</p>
-            <h2 className="section-title">Featured Dishes</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto mt-4">
+            <h2 className="section-title text-2xl md:text-3xl lg:text-4xl">Featured Dishes</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto mt-4 text-sm md:text-base">
               Chef's selection of our most exquisite creations, highlighting the finest seasonal ingredients and culinary artistry.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {featuredMenuItems.map((item) => (
               <MenuCard key={item.id} {...item} />
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <Link to="/menu" className="gold-button inline-flex items-center">
+          <div className="text-center mt-8 md:mt-12">
+            <Link to="/menu" className="gold-button inline-flex items-center text-sm md:text-base">
               View Full Menu
               <ChevronRight className="ml-2 h-4 w-4" />
             </Link>
@@ -152,7 +152,7 @@ const Index = () => {
       </section>
       
       {/* CTA - Reservation */}
-      <section className="relative py-24">
+      <section className="relative py-16 md:py-24">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -164,19 +164,19 @@ const Index = () => {
         </div>
         
         {/* Content */}
-        <div className="container mx-auto px-4 md:px-8 relative">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
           <div className="max-w-xl mx-auto text-center">
             <p className="section-subtitle">Experience L'Élégance</p>
-            <h2 className="section-title">Reserve Your Table</h2>
-            <p className="text-gray-300 mb-8 leading-relaxed">
+            <h2 className="section-title text-2xl md:text-3xl lg:text-4xl">Reserve Your Table</h2>
+            <p className="text-gray-300 mb-8 leading-relaxed text-sm md:text-base">
               Whether it's a special celebration or an intimate dinner, we're dedicated to making your experience unforgettable.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Link to="/reservation" className="gold-button w-full sm:w-auto inline-flex items-center justify-center">
+              <Link to="/reservation" className="gold-button w-full sm:w-auto inline-flex items-center justify-center text-sm md:text-base">
                 <Calendar className="mr-2 h-5 w-5" />
                 Book a Table
               </Link>
-              <Link to="/contact" className="ghost-button w-full sm:w-auto inline-flex items-center justify-center">
+              <Link to="/contact" className="ghost-button w-full sm:w-auto inline-flex items-center justify-center text-sm md:text-base">
                 Contact Us
               </Link>
             </div>

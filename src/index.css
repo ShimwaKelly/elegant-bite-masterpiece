@@ -70,20 +70,21 @@
   }
 
   .section-title {
-    @apply font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-white relative mb-8 inline-block;
+    @apply font-playfair font-bold text-white relative mb-6 md:mb-8 inline-block;
   }
 
   .section-title::after {
     content: '';
     @apply absolute h-[3px] bg-gold bottom-[-12px] left-0 animate-reveal-gold-bar;
+    width: 60px; /* Fixed width for consistency */
   }
 
   .section-subtitle {
-    @apply font-montserrat text-gold uppercase tracking-wider text-sm md:text-base mb-2;
+    @apply font-montserrat text-gold uppercase tracking-wider text-xs sm:text-sm mb-2;
   }
 
   .page-container {
-    @apply px-4 md:px-8 lg:px-16 py-16 md:py-24 lg:py-32 max-w-7xl mx-auto;
+    @apply px-4 md:px-8 lg:px-16 py-12 md:py-20 lg:py-24 max-w-7xl mx-auto;
   }
 
   .glass-card {
@@ -91,15 +92,15 @@
   }
 
   .gold-button {
-    @apply bg-gold hover:bg-gold-muted text-restaurant-black font-medium py-3 px-6 rounded-md transition-all duration-300 ease-in-out;
+    @apply bg-gold hover:bg-gold-muted text-restaurant-black font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-md transition-all duration-300 ease-in-out text-center;
   }
 
   .ghost-button {
-    @apply border border-gold/80 text-gold hover:bg-gold/10 font-medium py-3 px-6 rounded-md transition-all duration-300 ease-in-out;
+    @apply border border-gold/80 text-gold hover:bg-gold/10 font-medium py-2 sm:py-3 px-4 sm:px-6 rounded-md transition-all duration-300 ease-in-out text-center;
   }
 
   .icon-button {
-    @apply flex items-center justify-center w-10 h-10 rounded-full bg-gold/10 text-gold hover:bg-gold/20 transition-all duration-300;
+    @apply flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gold/10 text-gold hover:bg-gold/20 transition-all duration-300;
   }
 
   .shimmer {
@@ -143,7 +144,7 @@
   }
   
   .gold-divider {
-    @apply h-px w-full bg-gradient-to-r from-transparent via-gold/50 to-transparent my-8;
+    @apply h-px w-full bg-gradient-to-r from-transparent via-gold/50 to-transparent my-6 md:my-8;
   }
 }
 
@@ -154,7 +155,7 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -200,4 +201,11 @@ input:-webkit-autofill:active {
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 300ms, transform 300ms;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .section-title::after {
+    width: 40px;
+  }
 }
