@@ -266,7 +266,7 @@ const MenuManagement = () => {
             
             <div className="p-6">
               <MenuItemForm 
-                initialData={currentItem}
+                item={currentItem}
                 onSave={handleSaveItem}
                 onCancel={() => {
                   setIsFormOpen(false);

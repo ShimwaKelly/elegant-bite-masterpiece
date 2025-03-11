@@ -19,12 +19,16 @@ export interface Reservation {
 
 interface ReservationTableProps {
   reservations: Reservation[];
-  onUpdateStatus: (id: string, status: 'confirmed' | 'canceled') => void;
+  onStatusChange: (id: string, status: 'confirmed' | 'canceled') => void;
+  onSelectReservation?: (reservation: Reservation | null) => void;
+  selectedId?: string;
 }
 
 const ReservationTable: React.FC<ReservationTableProps> = ({
   reservations,
-  onUpdateStatus
+  onStatusChange,
+  onSelectReservation,
+  selectedId
 }) => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
@@ -33,12 +37,12 @@ const ReservationTable: React.FC<ReservationTableProps> = ({
   };
 
   const handleConfirm = (id: string) => {
-    onUpdateStatus(id, 'confirmed');
+    onStatusChange(id, 'confirmed');
     toast.success('Reservation confirmed');
   };
 
   const handleCancel = (id: string) => {
-    onUpdateStatus(id, 'canceled');
+    onStatusChange(id, 'canceled');
     toast.success('Reservation canceled');
   };
 

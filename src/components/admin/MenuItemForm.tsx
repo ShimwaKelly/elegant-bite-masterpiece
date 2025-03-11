@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -25,13 +24,13 @@ export interface MenuItem {
 }
 
 interface MenuItemFormProps {
-  item?: MenuItem;
-  onSave: (item: Omit<MenuItem, 'id'> & { id?: string }) => void;
+  item?: MenuItem;  // Changed initialData to item to match usage
+  onSave: (item: MenuItem) => void;
   onCancel: () => void;
 }
 
 const MenuItemForm: React.FC<MenuItemFormProps> = ({ 
-  item, 
+  item, // Changed from initialData to item
   onSave, 
   onCancel 
 }) => {
@@ -47,7 +46,7 @@ const MenuItemForm: React.FC<MenuItemFormProps> = ({
 
   // Populate form if editing an existing item
   useEffect(() => {
-    if (item) {
+    if (item) {  // Changed from initialData to item
       setName(item.name);
       setDescription(item.description);
       setPrice(item.price.toString());
@@ -56,7 +55,7 @@ const MenuItemForm: React.FC<MenuItemFormProps> = ({
       setIngredients(item.ingredients || []);
       setFeatured(item.featured || false);
     }
-  }, [item]);
+  }, [item]);  // Changed from initialData to item
 
   const handleAddIngredient = () => {
     if (newIngredient.trim() !== '' && !ingredients.includes(newIngredient.trim())) {
