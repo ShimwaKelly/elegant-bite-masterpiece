@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Menu, Calendar, LogOut, Search, Filter, Check, X, MessageSquare } from 'lucide-react';
@@ -14,7 +13,7 @@ interface Reservation {
   time: string;
   guests: number;
   specialRequests?: string;
-  status: 'confirmed' | 'pending' | 'cancelled';
+  status: 'confirmed' | 'pending' | 'canceled';
 }
 
 // Mock data - in a real app, this would come from a database
@@ -90,7 +89,7 @@ const initialReservations: Reservation[] = [
     date: '2024-05-14',
     time: '19:15',
     guests: 5,
-    status: 'cancelled'
+    status: 'canceled'
   },
 ];
 
@@ -115,7 +114,7 @@ const ReservationManagement = () => {
   });
   
   // Handle status change
-  const handleStatusChange = (id: string, status: 'confirmed' | 'pending' | 'cancelled') => {
+  const handleStatusChange = (id: string, status: 'confirmed' | 'pending' | 'canceled') => {
     setReservations(reservations.map(reservation => 
       reservation.id === id ? { ...reservation, status } : reservation
     ));
@@ -208,7 +207,7 @@ const ReservationManagement = () => {
                   <option value="all">All Statuses</option>
                   <option value="confirmed">Confirmed</option>
                   <option value="pending">Pending</option>
-                  <option value="cancelled">Cancelled</option>
+                  <option value="canceled">Canceled</option>
                 </select>
               </div>
               
@@ -324,9 +323,9 @@ const ReservationManagement = () => {
                         </button>
                         
                         <button 
-                          onClick={() => handleStatusChange(selectedReservation.id, 'cancelled')}
+                          onClick={() => handleStatusChange(selectedReservation.id, 'canceled')}
                           className={`px-3 py-2 rounded-md text-sm flex items-center ${
-                            selectedReservation.status === 'cancelled' 
+                            selectedReservation.status === 'canceled' 
                               ? 'bg-red-500/20 text-red-400 border border-red-400/30' 
                               : 'bg-restaurant-black/50 text-gray-300 hover:bg-red-500/10 hover:text-red-400'
                           }`}

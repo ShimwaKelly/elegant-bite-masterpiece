@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Menu, Calendar, LogOut, Plus, Edit, Trash2, Search, Filter } from 'lucide-react';
@@ -67,10 +66,10 @@ const MenuManagement = () => {
   });
   
   // Handle form submission for adding/editing menu items
-  const handleSaveItem = (item: MenuItem) => {
+  const handleSaveItem = (item: Omit<MenuItem, 'id'> & { id?: string }) => {
     if (item.id) {
       // Edit existing item
-      setMenuItems(menuItems.map(i => i.id === item.id ? item : i));
+      setMenuItems(menuItems.map(i => i.id === item.id ? { ...item, id: item.id } : i));
     } else {
       // Add new item
       const newItem = {
