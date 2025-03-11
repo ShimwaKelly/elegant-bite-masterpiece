@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[550px] sm:min-h-[600px] md:min-h-[650px] lg:h-screen w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden min-h-[550px] md:min-h-[650px] lg:h-screen">
       {/* Background image with overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Hero Content */}
-      <div className="relative h-full flex flex-col justify-center items-center text-center px-4 md:px-8 pt-16 pb-12 md:py-0">
+      <div className="relative flex flex-col justify-center items-center text-center px-4 md:px-8 pt-24 md:pt-16 pb-16 md:py-0 h-full">
         <p 
           ref={subtitleRef}
           className="font-montserrat uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gold text-xs sm:text-sm opacity-0 -translate-y-6 transition-all duration-700 mb-4"
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
         
         <h1 
           ref={titleRef}
-          className="font-playfair font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl text-white max-w-4xl opacity-0 -translate-y-6 transition-all duration-700 mb-4 md:mb-6 leading-tight"
+          className="font-playfair font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white max-w-4xl opacity-0 -translate-y-6 transition-all duration-700 mb-4 md:mb-6 leading-tight"
         >
           Where Culinary Artistry Meets Elegance
         </h1>
