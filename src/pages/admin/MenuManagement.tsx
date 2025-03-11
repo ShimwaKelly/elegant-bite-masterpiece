@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Menu, Calendar, LogOut, Plus, Edit, Trash2, Search, Filter } from 'lucide-react';
-import MenuItemForm from '../../components/admin/MenuItemForm';
-
-interface MenuItem {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  image: string;
-  category: string;
-  featured?: boolean;
-  ingredients?: string[];
-}
+import MenuItemForm, { MenuItem } from '../../components/admin/MenuItemForm';
 
 // Mock data - in a real app, this would come from a database
 const initialMenuItems: MenuItem[] = [
@@ -23,7 +12,8 @@ const initialMenuItems: MenuItem[] = [
     price: 24,
     image: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=1000',
     category: 'Appetizers',
-    ingredients: ['Scallops', 'Cauliflower', 'Citrus', 'Herbs']
+    ingredients: ['Scallops', 'Cauliflower', 'Citrus', 'Herbs'],
+    featured: false
   },
   {
     id: '4',
@@ -66,10 +56,10 @@ const MenuManagement = () => {
   });
   
   // Handle form submission for adding/editing menu items
-  const handleSaveItem = (item: Omit<MenuItem, 'id'> & { id?: string }) => {
+  const handleSaveItem = (item: MenuItem) => {
     if (item.id) {
       // Edit existing item
-      setMenuItems(menuItems.map(i => i.id === item.id ? { ...item, id: item.id } : i));
+      setMenuItems(menuItems.map(i => i.id === item.id ? item : i));
     } else {
       // Add new item
       const newItem = {
